@@ -8,7 +8,7 @@ using UnityEngine;
 public class playercontroler : MonoBehaviour
 {
 
-    private Rigidbody2D rigidbody2d;
+    private Rigidbody3D rigidbody3d;
     private Vector2 movement;
     public float moveSpeed;
 
@@ -17,7 +17,7 @@ public class playercontroler : MonoBehaviour
 
     void Start()
     {
-        rigidbody2d = this.GetComponent<Rigidbody2D>();
+        rigidbody3d = this.GetComponent<Rigidbody3D>();
     }
 
 
@@ -31,7 +31,7 @@ public class playercontroler : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rigidbody2d.MovePosition(rigidbody2d.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rigidbody2d.MovePosition(rigidbody3d.position + movement * moveSpeed * Time.fixedDeltaTime);
 
         if ((movement.x < 0) && looksLeft)
         {   Flip();
