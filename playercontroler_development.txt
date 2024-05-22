@@ -44,7 +44,7 @@ public class playercontroler : MonoBehaviour
    private void Flip()
   { 
     looksLeft = !looksLeft;
-    transform.Rotate(0f, 360f, 0f);
+    transform.Rotate(0f, 180f, 0f);
    }
 
 }
